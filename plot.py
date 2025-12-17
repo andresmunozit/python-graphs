@@ -104,12 +104,18 @@ for group, techs in sorted_grouped_tech.items():
 # Creating the bar graph
 y_pos = np.arange(len(technologies))
 
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(11, 6))
 bars = plt.barh(y_pos, years_of_experience, align='center', color=colors, alpha=0.7)
-plt.gca().invert_yaxis()  # Invert y-axis to display the most experience at the top
+ax = plt.gca()
+ax.invert_yaxis()  # Invert y-axis to display the most experience at the top
 plt.yticks(y_pos, technologies)
 plt.xlabel('Years')
 # plt.title('Experience by Technology')
+
+# Set spine and tick line colors
+spine_color = '#bbbbbb'  # Change this to your desired color
+plt.setp(ax.spines.values(), color=spine_color)
+plt.setp([ax.get_xticklines(), ax.get_yticklines()], color=spine_color)
 
 # Create a legend for the groups
 from matplotlib.patches import Patch
