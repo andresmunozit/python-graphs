@@ -120,4 +120,4 @@ plt.tight_layout(pad=0)
 plt.show()
 
 # Save the plot with zero margins
-plt.savefig(output_file, bbox_inches='tight', pad_inches=0)
+plt.savefig(output_file, bbox_inches='tight', pad_inches=0.02, format='png')
