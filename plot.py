@@ -3,7 +3,7 @@ import numpy as np
 
 # Set the global font to be 'sans-serif' (Arial, Helvetica, etc.), size 11
 plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.size'] = 11
+plt.rcParams['font.size'] = 10
 
 output_file = '/output/plot.png'
 
@@ -109,15 +109,15 @@ bars = plt.barh(y_pos, years_of_experience, align='center', color=colors, alpha=
 plt.gca().invert_yaxis()  # Invert y-axis to display the most experience at the top
 plt.yticks(y_pos, technologies)
 plt.xlabel('Years')
-plt.title('Experience by Technology')
+# plt.title('Experience by Technology')
 
 # Create a legend for the groups
 from matplotlib.patches import Patch
 legend_elements = [Patch(facecolor=color, label=group) for group, color in group_colors.items()]
 plt.legend(handles=legend_elements, title='Area')
 
-plt.tight_layout()
+plt.tight_layout(pad=0)
 plt.show()
 
-# Save the plot instead of showing it
-plt.savefig(output_file)
+# Save the plot with zero margins
+plt.savefig(output_file, bbox_inches='tight', pad_inches=0)
