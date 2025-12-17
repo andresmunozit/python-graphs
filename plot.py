@@ -122,7 +122,7 @@ plt.setp([ax.get_xticklines(), ax.get_yticklines()], color=spine_color)
 # Create a legend for the groups
 from matplotlib.patches import Patch
 legend_elements = [Patch(facecolor=color, label=group) for group, color in group_colors.items()]
-plt.legend(handles=legend_elements, title='Area')
+plt.legend(handles=legend_elements, title='Area', facecolor='white', framealpha=1, edgecolor='white', borderpad=0)
 
 plt.tight_layout(pad=0)
 plt.show()
