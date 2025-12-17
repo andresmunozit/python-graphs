@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Set the global font to be 'Arial', size 10
-plt.rcParams['font.family'] = 'monospace'
+# Set the global font to be 'sans-serif' (Arial, Helvetica, etc.), size 11
+plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.size'] = 11
 
 output_file = '/output/plot.png'
